@@ -2,8 +2,10 @@
 
 **Workflow ID:** UAE-DECARB-MONTHLY-001
 **Created:** March 29, 2026
+**Updated:** March 29, 2026 (v1.1 - Verified sources added)
 **Schedule:** Monthly (1st day of each month)
 **Owner:** Infrastructure Strategy Team
+**Verification Status:** ✅ Primary sources validated March 29, 2026
 
 ---
 
@@ -56,10 +58,13 @@ This automation workflow monitors UAE infrastructure decarbonization policy deve
 
 ### 3.2 Target Sources
 
-#### Government Portals (High Priority)
+#### Government Portals (High Priority) - VERIFIED
 ```
-- https://www.moccae.gov.ae (Ministry of Climate Change)
-- https://www.moei.gov.ae (Ministry of Energy & Infrastructure)
+✅ https://www.moccae.gov.ae/en/home - Ministry of Climate Change (VERIFIED March 29, 2026)
+  - Publications: https://www.moccae.gov.ae/en/media-center/publications.aspx
+  - Note: Some English pages return 404; try Arabic version or homepage navigation
+  
+⚠️ https://www.moei.gov.ae (Ministry of Energy & Infrastructure) - Verify access
 - https://www.cabinet.ae (UAE Cabinet)
 - https://www.fna.gov.ae (Federal National Council)
 ```
@@ -74,17 +79,29 @@ This automation workflow monitors UAE infrastructure decarbonization policy deve
 
 #### International Development Banks
 ```
-- https://www.worldbank.org/en/country/uae
+⚠️ https://www.worldbank.org/en/country/uae - Experienced 404 errors; verify
 - https://www.isdb.org/where-we-work/member-countries/uae
 - https://www.aiib.org/en/operations/country/uae.html
 - https://www.greenclimatefund.org/country/uae
 ```
 
-#### Industry & Research
+#### Industry & Research - VERIFIED
 ```
-- https://www.irena.org/uae
-- https://climateactiontracker.org/countries/uae
-- https://www.wri.org/uae
+✅ https://climateactiontracker.org/countries/uae/ - Climate Action Tracker (VERIFIED March 29, 2026)
+  - Primary source for NDC assessment, net-zero evaluation, policy analysis
+  - Independent scientific assessment with detailed sectoral breakdowns
+  - Update frequency: Multiple times per year
+  
+⚠️ https://www.irena.org/uae - 403 Forbidden during testing; verify access
+- https://www.wri.org/uae - Some pages unavailable; verify
+```
+
+#### Additional Verified Sources (Added v1.1)
+```
+✅ https://climateactiontracker.org/ - Global climate action tracking
+  - CAT Data Explorer for comparative analysis
+  - Net Zero Target Evaluations
+  - Sectoral Analysis (power, transport, buildings, industry)
 ```
 
 ### 3.3 Date Range Filter
@@ -525,3 +542,105 @@ output:
 ---
 
 *This workflow configuration should be implemented in accordance with organizational IT governance policies and data handling standards.*
+
+---
+
+## Appendix A: Verified Access Notes (March 29, 2026)
+
+### A.1 Successful Access Patterns
+
+| Source | Status | Notes |
+|--------|--------|-------|
+| climateactiontracker.org/countries/uae/ | ✅ SUCCESS | Full content extracted; primary verification source |
+| climateactiontracker.org/ | ✅ SUCCESS | Homepage and methodology accessible |
+| moccae.gov.ae/en/home | ✅ SUCCESS | Ministry homepage accessible |
+| moccae.gov.ae/en/media-center/publications.aspx | ✅ SUCCESS | Publications page loads (content requires navigation) |
+
+### A.2 Access Issues Encountered
+
+| Source | Issue | Workaround |
+|--------|-------|------------|
+| moccae.gov.ae/en/our-priorities/* | 404 Not Found | Use homepage navigation or Arabic version |
+| worldbank.org/en/country/uae/overview | 404 Not Found | Try alternative URLs or direct document search |
+| unfccc.int NDC Registry | Extraction failed | Direct browser access recommended |
+| irena.org/uae | 403 Forbidden | May require region-specific access |
+| iea.org/countries/uae | 403 Forbidden | Cloudflare protection; manual access |
+| adnoc.ae sustainability reports | Access denied | Direct download from ADNOC portal |
+| cop28.com pages | 404 Not Found | Event concluded; check archives |
+| masdar.ae | Cookie consent blocks | Requires interactive browser |
+
+### A.3 Recommended Search Query Refinements
+
+Based on successful retrieval patterns, prioritize these search approaches:
+
+**High Success Rate:**
+```
+"Climate Action Tracker UAE" - Direct access to verified assessments
+"site:climateactiontracker.org UAE infrastructure" - CAT internal search
+"site:moccae.gov.ae publications climate" - MOCCAE publications
+```
+
+**Medium Success Rate (verify access):**
+```
+"site:unfccc.int UAE NDC" - UNFCCC documents
+"site:worldbank.org UAE climate infrastructure" - World Bank projects
+"site:irena.org UAE renewable energy" - IRENA analysis
+```
+
+**Fallback Approach:**
+When direct URL access fails, use search engines with:
+- Site-specific operators (`site:domain.org`)
+- Date filters (`after:2023-01-01`)
+- File type filters (`filetype:pdf`)
+
+### A.4 Data Extraction Reliability
+
+| Content Type | Reliability | Notes |
+|--------------|-------------|-------|
+| HTML pages (static) | HIGH | Readability extractor works well |
+| PDF documents | MEDIUM | May require direct download |
+| Dynamic/JavaScript sites | LOW | web_fetch cannot execute JS |
+| Gated content | LOW | Cookie consent blocks extraction |
+| API-driven content | LOW | Requires API access |
+
+### A.5 Monthly Monitoring Priority Matrix
+
+| Priority | Source | Access Confidence | Content Value |
+|----------|--------|-------------------|---------------|
+| P0 | Climate Action Tracker - UAE | ✅ HIGH | HIGH - Independent verification |
+| P0 | MOCCAE Publications | ✅ HIGH | HIGH - Official policy |
+| P1 | UNFCCC NDC Registry | ⚠️ MEDIUM | HIGH - Official submissions |
+| P1 | UAE Ministry of Energy | ⚠️ MEDIUM | HIGH - Energy strategy |
+| P2 | World Bank UAE | ⚠️ MEDIUM | MEDIUM - Financing |
+| P2 | IRENA UAE | ⚠️ MEDIUM | MEDIUM - Renewable energy |
+| P3 | Emirate-level portals | ⚠️ MEDIUM | MEDIUM - Local regulations |
+| P3 | Industry sources | ⚠️ MEDIUM | LOW-MEDIUM - Supplementary |
+
+---
+
+## Appendix B: Key Verified Data Points for Baseline Comparison
+
+**From Climate Action Tracker (Verified March 29, 2026):**
+
+| Parameter | Verified Value | Source URL |
+|-----------|----------------|------------|
+| NDC Target 2030 | 185 MtCO2e (absolute) | climateactiontracker.org/countries/uae/ |
+| NDC Rating | "Almost Sufficient" (1.5°C pathways) | Same |
+| Fair Share Rating | "Insufficient" | Same |
+| Net Zero Target Year | 2050 | Same |
+| Net Zero Comprehensiveness | "Average" | Same |
+| CCS Reliance (Industry 2050) | 32% of emissions | Same |
+| CCS Reliance (Power 2050) | 50% capacity (fossil gas + CCS) | Same |
+| Clean Power Target 2030 | 30% | Same |
+| Renewables Investment | USD 54B (2023-2030) | Same |
+| ADNOC CCS Target 2030 | 10 MtCO2e/year | Same |
+| Historical Inventory Revision | -15% (2023 update) | Same |
+| Current Policy Gap 2030 | 29-74 MtCO2e | Same |
+
+**Use these verified values as baseline for deviation detection in monthly monitoring.**
+
+---
+
+**Document Version:** 1.1
+**Last Updated:** March 29, 2026
+**Next Review:** April 1, 2026 (automated) or upon source accessibility changes
