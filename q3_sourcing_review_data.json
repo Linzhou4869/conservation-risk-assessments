@@ -1,0 +1,158 @@
+{
+  "parameters": {
+    "base_fabric_cost": 12.0,
+    "logistics": 3.5,
+    "duty_rate": 0.08,
+    "target_margin": 0.15,
+    "cost_threshold": 17.5
+  },
+  "scenarios": [
+    {
+      "name": "Baseline - Current Supplier",
+      "fabric_cost_adj": 1.0,
+      "logistics_adj": 1.0,
+      "duty_adj": 1.0,
+      "volume_discount": 0.0,
+      "quality_yield": 0.98
+    },
+    {
+      "name": "Scenario A - Alternative Supplier (Vietnam)",
+      "fabric_cost_adj": 0.92,
+      "logistics_adj": 1.15,
+      "duty_adj": 0.85,
+      "volume_discount": 0.03,
+      "quality_yield": 0.96
+    },
+    {
+      "name": "Scenario B - Alternative Supplier (Bangladesh)",
+      "fabric_cost_adj": 0.85,
+      "logistics_adj": 1.25,
+      "duty_adj": 0.9,
+      "volume_discount": 0.05,
+      "quality_yield": 0.94
+    },
+    {
+      "name": "Scenario C - Premium Supplier (Italy)",
+      "fabric_cost_adj": 1.35,
+      "logistics_adj": 1.1,
+      "duty_adj": 1.0,
+      "volume_discount": 0.0,
+      "quality_yield": 0.99
+    },
+    {
+      "name": "Scenario D - Bulk Order (10K+ units)",
+      "fabric_cost_adj": 0.88,
+      "logistics_adj": 0.95,
+      "duty_adj": 1.0,
+      "volume_discount": 0.08,
+      "quality_yield": 0.97
+    },
+    {
+      "name": "Scenario E - Rush Production",
+      "fabric_cost_adj": 1.2,
+      "logistics_adj": 1.5,
+      "duty_adj": 1.0,
+      "volume_discount": 0.0,
+      "quality_yield": 0.95
+    }
+  ],
+  "results": [
+    {
+      "scenario_name": "Baseline - Current Supplier",
+      "cost_data": {
+        "base_fabric_cost": 12.0,
+        "logistics_cost": 3.5,
+        "duty_amount": 1.24,
+        "duty_rate_used": 8.0,
+        "subtotal_before_discount": 16.74,
+        "volume_discount": 0.0,
+        "total_landed_cost": 16.74,
+        "effective_cost_per_good_unit": 17.08,
+        "required_selling_price": 19.69,
+        "quality_yield": 98.0,
+        "exceeds_threshold": false
+      }
+    },
+    {
+      "scenario_name": "Scenario A - Alternative Supplier (Vietnam)",
+      "cost_data": {
+        "base_fabric_cost": 11.04,
+        "logistics_cost": 4.02,
+        "duty_amount": 1.02,
+        "duty_rate_used": 6.8,
+        "subtotal_before_discount": 16.09,
+        "volume_discount": 0.48,
+        "total_landed_cost": 15.61,
+        "effective_cost_per_good_unit": 16.26,
+        "required_selling_price": 18.36,
+        "quality_yield": 96.0,
+        "exceeds_threshold": false
+      }
+    },
+    {
+      "scenario_name": "Scenario B - Alternative Supplier (Bangladesh)",
+      "cost_data": {
+        "base_fabric_cost": 10.2,
+        "logistics_cost": 4.38,
+        "duty_amount": 1.05,
+        "duty_rate_used": 7.2,
+        "subtotal_before_discount": 15.62,
+        "volume_discount": 0.78,
+        "total_landed_cost": 14.84,
+        "effective_cost_per_good_unit": 15.79,
+        "required_selling_price": 17.46,
+        "quality_yield": 94.0,
+        "exceeds_threshold": false
+      }
+    },
+    {
+      "scenario_name": "Scenario C - Premium Supplier (Italy)",
+      "cost_data": {
+        "base_fabric_cost": 16.2,
+        "logistics_cost": 3.85,
+        "duty_amount": 1.6,
+        "duty_rate_used": 8.0,
+        "subtotal_before_discount": 21.65,
+        "volume_discount": 0.0,
+        "total_landed_cost": 21.65,
+        "effective_cost_per_good_unit": 21.87,
+        "required_selling_price": 25.48,
+        "quality_yield": 99.0,
+        "exceeds_threshold": true
+      }
+    },
+    {
+      "scenario_name": "Scenario D - Bulk Order (10K+ units)",
+      "cost_data": {
+        "base_fabric_cost": 10.56,
+        "logistics_cost": 3.32,
+        "duty_amount": 1.11,
+        "duty_rate_used": 8.0,
+        "subtotal_before_discount": 15.0,
+        "volume_discount": 1.2,
+        "total_landed_cost": 13.8,
+        "effective_cost_per_good_unit": 14.22,
+        "required_selling_price": 16.23,
+        "quality_yield": 97.0,
+        "exceeds_threshold": false
+      }
+    },
+    {
+      "scenario_name": "Scenario E - Rush Production",
+      "cost_data": {
+        "base_fabric_cost": 14.4,
+        "logistics_cost": 5.25,
+        "duty_amount": 1.57,
+        "duty_rate_used": 8.0,
+        "subtotal_before_discount": 21.22,
+        "volume_discount": 0.0,
+        "total_landed_cost": 21.22,
+        "effective_cost_per_good_unit": 22.34,
+        "required_selling_price": 24.97,
+        "quality_yield": 95.0,
+        "exceeds_threshold": true
+      }
+    }
+  ],
+  "generated_at": "2026-03-28T15:28:07.268738"
+}
