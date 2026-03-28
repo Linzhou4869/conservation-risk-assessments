@@ -1,0 +1,57 @@
+[
+  {
+    "patient_id":"P-001",
+    "age":65,
+    "ecog_status":1,
+    "age_compliant":true,
+    "ecog_compliant":true,
+    "overall_compliant":true,
+    "violations":null,
+    "risk_level":"N\/A",
+    "violation_count":0
+  },
+  {
+    "patient_id":"P-002",
+    "age":16,
+    "ecog_status":0,
+    "age_compliant":false,
+    "ecog_compliant":true,
+    "overall_compliant":false,
+    "violations":"Age 16 below minimum requirement (\u226518)",
+    "risk_level":"MEDIUM",
+    "violation_count":1
+  },
+  {
+    "patient_id":"P-003",
+    "age":72,
+    "ecog_status":3,
+    "age_compliant":true,
+    "ecog_compliant":false,
+    "overall_compliant":false,
+    "violations":"ECOG 3 exceeds maximum allowed (\u22642)",
+    "risk_level":"HIGH",
+    "violation_count":1
+  },
+  {
+    "patient_id":"P-004",
+    "age":55,
+    "ecog_status":2,
+    "age_compliant":true,
+    "ecog_compliant":true,
+    "overall_compliant":true,
+    "violations":null,
+    "risk_level":"N\/A",
+    "violation_count":0
+  },
+  {
+    "patient_id":"P-005",
+    "age":40,
+    "ecog_status":4,
+    "age_compliant":true,
+    "ecog_compliant":false,
+    "overall_compliant":false,
+    "violations":"ECOG 4 exceeds maximum allowed (\u22642)",
+    "risk_level":"HIGH",
+    "violation_count":1
+  }
+]

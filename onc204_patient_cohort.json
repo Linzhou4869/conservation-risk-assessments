@@ -1,0 +1,7 @@
+[
+  {"patient_id": "P-001", "age": 65, "ecog_status": 1},
+  {"patient_id": "P-002", "age": 16, "ecog_status": 0},
+  {"patient_id": "P-003", "age": 72, "ecog_status": 3},
+  {"patient_id": "P-004", "age": 55, "ecog_status": 2},
+  {"patient_id": "P-005", "age": 40, "ecog_status": 4}
+]

@@ -1,0 +1,6 @@
+patient_id,age,ecog_status,age_compliant,ecog_compliant,overall_compliant,violations,risk_level,violation_count
+P-001,65,1,True,True,True,,N/A,0
+P-002,16,0,False,True,False,Age 16 below minimum requirement (≥18),MEDIUM,1
+P-003,72,3,True,False,False,ECOG 3 exceeds maximum allowed (≤2),HIGH,1
+P-004,55,2,True,True,True,,N/A,0
+P-005,40,4,True,False,False,ECOG 4 exceeds maximum allowed (≤2),HIGH,1
