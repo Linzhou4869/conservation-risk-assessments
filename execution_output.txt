@@ -1,0 +1,15 @@
+Violation detected: 9560
+Violation detected: 9531
+Violation detected: 8213
+Violation detected: 8807
+Violation detected: 9963
+Violation detected: 9368
+Violation detected: 9481
+Violation detected: 9542
+Violation detected: 8715
+Violation detected: 9482
+Violation detected: 9179
+Violation detected: 8395
+Violation detected: 9817
+Violation detected: 9724
+Violation detected: 9543
